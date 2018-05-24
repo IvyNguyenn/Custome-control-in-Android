@@ -1,2 +1,2 @@
-# Custome-control-in-Android
+# Custom-control-in-Android
 
