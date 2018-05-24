@@ -1,0 +1,53 @@
+- Dùng custom có sẵn trong thư viện @android
+
+android:background="@drawable/abc_menu_dropdown_panel_holo_light"
+
+android:background="@android:drawable/dialog_holo_light_frame"
+
+android:background="@android:drawable/dialog_holo_light_frame"
+
+- Dùng CardView
+
+<android.support.v7.widget.CardView
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp"
+    app:cardPreventCornerOverlap="false"
+    app:contentPadding="0dp">
+
+    <!-- your layout stuff here -->
+
+</android.support.v7.widget.CardView>
+
+---> thêm vào Gradle:  compile 'com.android.support:cardview-v7:26.0.0'
+
+
+- Dùng layer-list
+
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--the shadow comes from here-->
+    <item
+        android:bottom="0dp"
+        android:drawable="@android:drawable/dialog_holo_light_frame"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp">
+
+    </item>
+
+    <item
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp">
+        <!--whatever you want in the background, here i preferred solid white -->
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white" />
+
+        </shape>
+    </item>
+</layer-list>
+
